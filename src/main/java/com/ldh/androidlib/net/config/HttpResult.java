@@ -1,4 +1,4 @@
-package com.ldh.androidlib.net;
+package com.ldh.androidlib.net.config;
 
 /**
  * * 标准数据格式

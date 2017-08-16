@@ -40,28 +40,28 @@ public class ExceptionEngine {
                 case BAD_GATEWAY:
                 case SERVICE_UNAVAILABLE:
                 default:
-                    ex.message = "网络错误";  //均视为网络错误
+                    ex.setErrorMsg("网络错误");  //均视为网络错误
                     break;
             }
             return ex;
         } else if (e instanceof ServerException) {    //服务器返回的错误
             ServerException resultException = (ServerException) e;
             ex = new ApiException(resultException, resultException.code);
-            ex.message = resultException.message;
+            ex.setErrorMsg(resultException.message);
             return ex;
         } else if (e instanceof JsonParseException
                 || e instanceof JSONException
                 || e instanceof ParseException) {
             ex = new ApiException(e, ERROR.PARSE_ERROR);
-            ex.message = "解析错误";            //均视为解析错误
+            ex.setErrorMsg("解析错误");            //均视为解析错误
             return ex;
         } else if (e instanceof ConnectException) {
             ex = new ApiException(e, ERROR.NETWORD_ERROR);
-            ex.message = "连接失败";  //均视为网络错误
+            ex.setErrorMsg("连接失败");  //均视为网络错误
             return ex;
         } else {
             ex = new ApiException(e, ERROR.UNKNOWN);
-            ex.message = "未知错误";          //未知错误
+            ex.setErrorMsg("未知错误");          //未知错误
             return ex;
         }
     }

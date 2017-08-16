@@ -41,10 +41,10 @@ public final class DevUtil {
     }
 
     /**
-     * Send a {@link Log#VERBOSE} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
+     * Send a {@link Log#VERBOSE} log errorMsg.
+     * @param tag Used to identify the source of a log errorMsg.  It usually identifies
      *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
+     * @param msg The errorMsg you would like logged.
      */
     public static void v(String tag, String msg) {
         if (isDebug) {
@@ -53,10 +53,10 @@ public final class DevUtil {
     }
 
     /**
-     * Send a {@link Log#WARN} log message and log the exception.
-     * @param tag Used to identify the source of a log message.  It usually identifies
+     * Send a {@link Log#WARN} log errorMsg and log the exception.
+     * @param tag Used to identify the source of a log errorMsg.  It usually identifies
      *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
+     * @param msg The errorMsg you would like logged.
      * @param e An exception to log
      */
     public static void w(String tag, String msg, Throwable e) {
@@ -107,10 +107,10 @@ public final class DevUtil {
     }
 
     /**
-     * Send a {@link Log#DEBUG} log message.
-     * @param tag Used to identify the source of a log message.  It usually identifies
+     * Send a {@link Log#DEBUG} log errorMsg.
+     * @param tag Used to identify the source of a log errorMsg.  It usually identifies
      *        the class or activity where the log call occurs.
-     * @param msg The message you would like logged.
+     * @param msg The errorMsg you would like logged.
      */
     public static void d(String tag, String msg) {
         if (isDebug) {

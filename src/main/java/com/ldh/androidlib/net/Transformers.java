@@ -1,5 +1,6 @@
 package com.ldh.androidlib.net;
 
+import com.ldh.androidlib.net.config.HttpResult;
 import com.ldh.androidlib.net.exception.ExceptionEngine;
 import com.ldh.androidlib.net.exception.ServerException;
 
