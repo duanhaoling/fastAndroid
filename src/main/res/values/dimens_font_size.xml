@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ajkH0Font">22sp</dimen>
+    <dimen name="ajkH1Font">20sp</dimen>
+    <dimen name="ajkH2Font">18sp</dimen>
+    <dimen name="ajkH3Font">16sp</dimen>
+    <dimen name="ajkH4Font">14sp</dimen>
+    <dimen name="ajkH5Font">12sp</dimen>
+    <dimen name="ajkH6Font">10sp</dimen>
+</resources>
