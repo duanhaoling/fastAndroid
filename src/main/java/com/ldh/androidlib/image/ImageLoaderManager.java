@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import com.ldh.androidlib.image.frescoloader.FrescoImageLoader;
+import com.ldh.androidlib.image.glideloader.GlideImageLoader;
 
 /**
  * Created by ldh on 2017/9/4.
@@ -76,8 +76,8 @@ public class ImageLoaderManager implements IImageLoaderstrategy {
     // 在application的oncreate中初始化
     @Override
     public void init(Context context) {
-        loaderstrategy = new FrescoImageLoader();
-//        loaderstrategy=new GlideImageLoader();
+//        loaderstrategy = new FrescoImageLoader();
+        loaderstrategy=new GlideImageLoader();
         loaderstrategy.init(context);
     }
 

@@ -1,4 +1,4 @@
-package com.ldh.androidlib.view.dialog;
+package com.ldh.androidlib.view.dialog.demo;
 
 import android.app.Dialog;
 import android.content.Context;

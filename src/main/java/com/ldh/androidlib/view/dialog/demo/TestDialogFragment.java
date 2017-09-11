@@ -1,4 +1,4 @@
-package com.ldh.androidlib.view.dialog;
+package com.ldh.androidlib.view.dialog.demo;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
