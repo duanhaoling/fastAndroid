@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
+import android.support.annotation.Keep;
 import android.support.v4.content.FileProvider;
 
 import java.io.File;
@@ -15,7 +16,7 @@ import java.io.File;
  * 对于面向 Android 7.0 的应用，Android 框架执行的 StrictMode API 政策禁止在您的应用外部公开 file:// URI。
  * 如果一项包含文件 URI 的 intent 离开您的应用，则应用出现故障，并出现 FileUriExposedException 异常。
  */
-
+@Keep
 public class FileProvider7 {
 
     public static Uri getUriForFile(Context context, File file) {

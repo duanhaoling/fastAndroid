@@ -1,5 +1,6 @@
 package com.ldh.androidlib.view.dialog.nice;
 
+import android.support.annotation.Keep;
 import android.util.SparseArray;
 import android.view.View;
 import android.widget.TextView;
@@ -7,7 +8,7 @@ import android.widget.TextView;
 /**
  * Created by ldh on 2017/9/8.
  */
-
+@Keep
 public class DialogViewHolder {
     private SparseArray<View> views;
     private View convertView;

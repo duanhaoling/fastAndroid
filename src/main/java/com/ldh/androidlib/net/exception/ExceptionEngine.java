@@ -1,6 +1,7 @@
 package com.ldh.androidlib.net.exception;
 
 import android.net.ParseException;
+import android.support.annotation.Keep;
 
 import com.google.gson.JsonParseException;
 
@@ -13,7 +14,7 @@ import retrofit2.HttpException;
 /**
  * Created by ldh on 2017/8/14.
  */
-
+@Keep
 public class ExceptionEngine {
     //对应HTTP的状态码
     private static final int UNAUTHORIZED = 401;

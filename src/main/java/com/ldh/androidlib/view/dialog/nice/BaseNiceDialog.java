@@ -1,6 +1,7 @@
 package com.ldh.androidlib.view.dialog.nice;
 
 import android.os.Bundle;
+import android.support.annotation.Keep;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.annotation.StyleRes;
@@ -19,7 +20,7 @@ import com.ldh.androidlib.R;
 /**
  * Created by ldh on 2017/9/8.
  */
-
+@Keep
 public abstract class BaseNiceDialog extends DialogFragment {
 
     private static final String MARGIN = "margin";

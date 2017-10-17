@@ -1,13 +1,14 @@
 package com.ldh.androidlib.view.dialog.nice;
 
 import android.os.Bundle;
+import android.support.annotation.Keep;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
 /**
  * Created by ldh on 2017/9/8.
  */
-
+@Keep
 public class NiceDialog extends BaseNiceDialog {
     private static final String KEY_LISTENER = "listener";
     private ViewConvertListener convertListener;

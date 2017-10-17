@@ -1,6 +1,7 @@
 package com.ldh.androidlib.image;
 
 import android.content.Context;
+import android.support.annotation.Keep;
 import android.support.annotation.NonNull;
 import android.view.View;
 
@@ -9,7 +10,7 @@ import com.ldh.androidlib.image.glideloader.GlideImageLoader;
 /**
  * Created by ldh on 2017/9/4.
  */
-
+@Keep
 public class ImageLoaderManager implements IImageLoaderstrategy {
     private static final ImageLoaderManager INSTANCE = new ImageLoaderManager();
     private IImageLoaderstrategy loaderstrategy;

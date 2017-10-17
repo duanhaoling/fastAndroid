@@ -14,22 +14,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-    buildTypes {
-        debug{
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-        }
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-
-    }
     //  设置以后主项目可以使用 debugCompile project(path: ':androidlib', configuration: 'debug')
     //  中的configuration: 'debug'或者'release'
     publishNonDefault true
-
 
     compileOptions { //设置以后可以在代码里使用retrolambda
         sourceCompatibility JavaVersion.VERSION_1_8
