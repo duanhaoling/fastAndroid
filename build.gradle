@@ -16,7 +16,8 @@ android {
     }
     //  设置以后主项目可以使用 debugCompile project(path: ':androidlib', configuration: 'debug')
     //  中的configuration: 'debug'或者'release'
-    publishNonDefault true
+    // http://zzqhost.com/2017/06/13/productFlavors%E7%9A%84%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/
+    publishNonDefault true  //注意，这里的配置是为了去除gradle对library module默认只编译release buildType的限制
 
     compileOptions { //设置以后可以在代码里使用retrolambda
         sourceCompatibility JavaVersion.VERSION_1_8
