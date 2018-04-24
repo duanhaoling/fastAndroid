@@ -43,12 +43,12 @@ class GmacsEnvi {
         appContext = context.getApplicationContext();
         DisplayMetrics var1 = appContext.getResources().getDisplayMetrics();
         androidId = Settings.Secure.getString(context.getContentResolver(), "android_id");
-        TelephonyManager var2 = (TelephonyManager) context.getSystemService("phone");
+        TelephonyManager var2 = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         if (0 == PermissionChecker.checkSelfPermission(context, "android.permission.READ_PHONE_STATE")) {
             deviceId = var2.getDeviceId();
         }
 
-        WifiManager manager = (WifiManager) context.getSystemService("wifi");
+        WifiManager manager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         wifiMac = manager.getConnectionInfo().getMacAddress();
         screenWidth = var1.widthPixels;
         screenHeight = var1.heightPixels;
@@ -116,7 +116,7 @@ class GmacsEnvi {
     }
 
     /**
-     * 状态栏
+     * 获取状态栏高度
      * @return
      */
     private static int getStatusBarHeight() {
@@ -125,6 +125,10 @@ class GmacsEnvi {
         return var0.getDimensionPixelSize(var1);
     }
 
+    /**
+     * 获取导航栏高度
+     * @return
+     */
     private static int getNavigationBarHeight() {
         if (isShowNavigationBar()) {
             Resources var0 = appContext.getResources();

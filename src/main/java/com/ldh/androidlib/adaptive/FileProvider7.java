@@ -21,7 +21,7 @@ public class FileProvider7 {
 
     public static Uri getUriForFile(Context context, File file) {
         Uri fileUri = null;
-        if (Build.VERSION.SDK_INT >= 24) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             fileUri = getUriForFile24(context, file);
         } else {
             fileUri = Uri.fromFile(file);
