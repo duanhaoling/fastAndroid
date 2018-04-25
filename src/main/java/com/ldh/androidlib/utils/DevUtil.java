@@ -25,7 +25,7 @@ import com.ldh.androidlib.BuildConfig;
  * 5. 判断是否运行在模拟器上 <br/>
  */
 public final class DevUtil {
-    public static final String TAG = "_ajkbroker_";
+    public static final String TAG = "_devUtil_";
     private static final boolean isDebug = BuildConfig.DEBUG;
 
     private DevUtil() {
@@ -79,7 +79,7 @@ public final class DevUtil {
     /**
      * 通过签名判断是否为开发版.
      * 开发版keystore见项目根目录的debug.keystore
-     * 线上版的keystore为根目录下的anjuke.keystore
+     * 线上版的keystore为根目录下的keystore
      */
     private static boolean debuggable(Context appContext) {
         final int DEBUG_SIGNATURE_HASH = -545290802;

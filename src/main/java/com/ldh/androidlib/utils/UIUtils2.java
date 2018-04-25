@@ -79,8 +79,6 @@ public class UIUtils2 {
      * @param context
      * @param dipValue
      * @return 转化后的pix值
-     * @author zhihuxing@anjuke.com
-     * @since Ver 4.1
      */
     public static float dip2px(Context context, float dipValue) {
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dipValue, context.getResources()
@@ -105,8 +103,6 @@ public class UIUtils2 {
      * @param context
      * @param pxValue
      * @return 转化后的dp值
-     * @author zhihuxing@anjuke.com
-     * @since Ver 4.1
      */
     public static float px2dip(Context context, float pxValue) {
         return pxValue / context.getResources().getDisplayMetrics().density;
