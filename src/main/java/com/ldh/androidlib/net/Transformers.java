@@ -20,6 +20,8 @@ public class Transformers {
 
     /**
      * 判断返回码，抛出异常或者取出数据 ，并交给ExceptionEngine处理异常
+     * map()  判断返回状态码，取出data，保证不为空。
+     * onErrorResumeNext()  通过ExceptionEngine对网络异常和服务端返回异常分类，统一为ErrorInfo
      *
      * @param <T>
      * @return
