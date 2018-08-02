@@ -41,20 +41,20 @@ class GmacsEnvi {
 
     public static void initialize(Context context) {
         appContext = context.getApplicationContext();
-        DisplayMetrics var1 = appContext.getResources().getDisplayMetrics();
+        DisplayMetrics displayMetrics = appContext.getResources().getDisplayMetrics();
         androidId = Settings.Secure.getString(context.getContentResolver(), "android_id");
-        TelephonyManager var2 = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         if (0 == PermissionChecker.checkSelfPermission(context, "android.permission.READ_PHONE_STATE")) {
-            deviceId = var2.getDeviceId();
+            deviceId = telephonyManager.getDeviceId();
         }
 
         WifiManager manager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         wifiMac = manager.getConnectionInfo().getMacAddress();
-        screenWidth = var1.widthPixels;
-        screenHeight = var1.heightPixels;
+        screenWidth = displayMetrics.widthPixels;
+        screenHeight = displayMetrics.heightPixels;
         statusBarHeight = getStatusBarHeight();
         navigationBarHeight = getNavigationBarHeight();
-        density = var1.density;
+        density = displayMetrics.density;
     }
 
     public static int getGLMaxTextureSize() {
